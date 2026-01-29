@@ -1,5 +1,34 @@
 {
-    "Home": {
+    "header": {
+        "navLinks": {
+            "home": "Inicio",
+            "adopt": "Adoptar",
+            "about": "Nosotros",
+            "contact": "Contacto",
+            "blog": "Blog"
+        },
+        "languageSelector" : {
+            "es": "Español",
+            "en": "Inglés"
+        },
+        "auth": {
+            "signIn": "Entrar"
+        },
+        "userMenu": {
+            "dashboard": "Mi Panel",
+            "profile": "Mi Perfil",
+            "logout": "Cerrar Sesión"
+        }
+    },
+    "footer": {
+        "copyright": "Copyright © 2023 Adopta un Perro Mayor. Todos los derechos reservados.",
+        "socialMedia": {
+            "facebook": "Facebook",
+            "twitter": "Twitter",
+            "instagram": "Instagram"
+        }
+    },
+    "home": {
         "title": "Hola Mundo!",
         "metadata": {
             "title": "Inicio",

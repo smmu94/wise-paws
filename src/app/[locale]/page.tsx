@@ -8,14 +8,14 @@ export async function generateMetadata(
 
   return createMetadata({
     locale,
-    namespace: "Home.metadata"
+    namespace: "home.metadata"
   });
 }
  
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("Home");
+  const t = await getTranslations("home");
   
   return <h1>{t("title")}</h1>;
 }

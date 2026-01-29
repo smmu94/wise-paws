@@ -1,5 +1,26 @@
 {
-    "Home": {
+    "header": {
+        "navLinks": {
+            "home": "Home",
+            "adopt": "Adopt",
+            "about": "About",
+            "contact": "Contact",
+            "blog": "Blog"
+        },
+        "languageSelector" : {
+            "es": "Spanish",
+            "en": "English"
+        },
+        "auth": {
+            "signIn": "Sign In"
+        },
+        "userMenu": {
+            "dashboard": "Dashboard",
+            "profile": "Profile",
+            "logout": "Log Out"
+        }
+    },
+    "home": {
         "title": "Hello World!",
         "metadata": {
             "title": "Home",

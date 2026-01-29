@@ -1,3 +1,4 @@
+import { Header } from "@/components/layout/header";
 import { routing } from "@/i18n/routing";
 import "@/styles/globals.css";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
@@ -21,7 +22,7 @@ const inter = Inter({
 });
 
 export function generateStaticParams() {
-  return routing.locales.map(locale => ({ locale }));
+    return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({ children, params }: Props) {
@@ -35,7 +36,10 @@ export default async function RootLayout({ children, params }: Props) {
             <body
                 className={`${geistSans.variable} ${inter.variable} antialiased`}
             >
-                <NextIntlClientProvider >{children}</NextIntlClientProvider>
+                <NextIntlClientProvider>
+                    <Header />
+                    {children}
+                </NextIntlClientProvider>
             </body>
         </html>
     );
