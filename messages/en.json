@@ -20,6 +20,26 @@
             "logout": "Log Out"
         }
     },
+     "footer": {
+        "description": "Making senior dog adoption simple, smart, and full of love. Join our community of over 50000",
+        "explore": "Explore",
+        "contact": "Contact",
+        "location": "Comunidad 100% Remota | Con sede en la nube",
+        "resources": {
+            "title": "Resources",
+            "links": {
+                "info": "Adoption Guide and FAQ",
+                "stories": "Success Stories and Senior of the Month",
+                "ai": "MatchMaker Agent"
+            }
+        },
+        "rights": "All rights reserved.",
+        "legal": {
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Service",
+            "cookies": "Cookie Settings"
+        }
+    },
     "home": {
         "title": "Hello World!",
         "metadata": {

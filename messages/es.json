@@ -21,11 +21,23 @@
         }
     },
     "footer": {
-        "copyright": "Copyright © 2023 Adopta un Perro Mayor. Todos los derechos reservados.",
-        "socialMedia": {
-            "facebook": "Facebook",
-            "twitter": "Twitter",
-            "instagram": "Instagram"
+        "description": "Haciendo la adopción de perros senior algo sencillo, inteligente y lleno de amor. Únete a nuestra comunidad de más de 50.000",
+        "explore": "Navegar",
+        "contact": "Contacto",
+        "location": "Comunidad 100% Remota | Con sede en la nube",
+        "resources": {
+            "title": "Recursos",
+            "links": {
+                "info": "Guía de Adopción y FAQ",
+                "stories": "Casos de éxito y Senior del mes",
+                "ai": "Agente MatchMaker"
+            }
+        },
+        "rights": "Todos los derechos reservados.",
+        "legal": {
+            "privacy": "Política de Privacidad",
+            "terms": "Términos de Servicio",
+            "cookies": "Configuración de Cookies"
         }
     },
     "home": {

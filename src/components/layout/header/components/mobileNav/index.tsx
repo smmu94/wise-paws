@@ -15,8 +15,8 @@ import { routes } from "@/lib/routes";
 import { LogOut, MenuIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { LanguageSelector } from "../languageSelector";
-import { UserMenuProps } from "../userMenu/types";
+import { LanguageSelector } from "@/components/layout/header/components/languageSelector";
+import { UserMenuProps } from "@/components/layout/header/components/userMenu/types";
 
 export const MobileNav = ({
     links,

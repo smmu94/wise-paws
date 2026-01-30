@@ -10,5 +10,8 @@ export const routes = {
         list: "/blog",
         detail: (id: string) => `/blog/${id}`
     },
-    auth: "/auth"
+    auth: "/auth",
+    info: "/info",
+    stories: "/stories",
+    matchmaker: "/matchmaker",
 } as const;

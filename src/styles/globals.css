@@ -10,6 +10,7 @@
   --color-white: #ffffff;
   --color-light-cream: #fdfdfd;
   --color-light-gray: #e5e7eb;
+  --color-brown: #2d2424;
   --font-base: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-title: var(--font-geist-sans), sans-serif; 
 }

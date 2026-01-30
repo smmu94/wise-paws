@@ -19,7 +19,7 @@ export const Header = async () => {
     };
 
     return (
-        <header className="sticky top-0 z-50 bg-white border-b border-light-gray flex justify-between items-center p-4">
+        <header className="sticky top-0 z-50 bg-white border-b border-light-gray flex justify-between items-center px-12 py-4">
             <div className="flex gap-4 items-center">
                 <Image src="/logo.svg" alt="Logo" width={50} height={50} />
                 <p className="text-subtitle text-dark-gray hidden sm:block">Wise Paws</p>
