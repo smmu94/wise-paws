@@ -43,13 +43,40 @@
 
 @utility text-title {
   font-family: var(--font-title);
-  font-size: 3rem; /* text-5xl */
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
 }
 
 @utility text-subtitle {
   font-family: var(--font-title);
-  font-size: 1.875rem; /* text-3xl */
+  font-size: 1.875rem;
   font-weight: 700;
+}
+
+@layer utilities {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-salmon) var(--color-light-cream);
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--color-light-cream);
+    border-radius: 6px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--color-salmon);
+    border-radius: 6px;
+    border: 1px solid var(--color-light-cream);
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-dark-gray);
+  }
 }

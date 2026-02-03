@@ -44,6 +44,12 @@
             "cookies": "Cookie Settings"
         }
     },
+    "chatAssistant": {
+        "header": "Assistant",
+        "initialMessage": "Hello 👋, I'm your Wise Paws assistant. I’m here to help you with any questions or inquiries you may have.",
+        "inputPlaceholder": "Type your message...",
+        "sendButton": "Send"
+    },
     "home": {
         "title": "Hello World!"
     }
