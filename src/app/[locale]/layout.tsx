@@ -1,3 +1,4 @@
+import ChatAssistant from "@/components/layout/chatAssistant";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { routing } from "@/i18n/routing";
@@ -59,6 +60,7 @@ export default async function RootLayout({ children, params }: Props) {
                     <Header />
                     <main className="grow">{children}</main>
                     <Footer />
+                    <ChatAssistant />
                 </NextIntlClientProvider>
             </body>
         </html>
