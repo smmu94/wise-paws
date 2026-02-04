@@ -1,5 +1,5 @@
 import { NAV_LINKS } from "@/lib/navigation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaPhone } from "react-icons/fa";
@@ -7,8 +7,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { RESOURCE_LINKS } from "./constants";
 
-export const Footer = () => {
-    const t = useTranslations();
+export const Footer = async () => {
+    const t = await getTranslations();
     const currentYear = new Date().getFullYear();
 
     return (

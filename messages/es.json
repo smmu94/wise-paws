@@ -1,4 +1,8 @@
 {
+    "metadata": {
+        "siteName": "Wise Paws",
+        "description": "Adopta un perro mayor hoy y marca la diferencia en su vida."
+    },
     "header": {
         "navLinks": {
             "home": "Inicio",
@@ -7,7 +11,7 @@
             "contact": "Contacto",
             "blog": "Blog"
         },
-        "languageSelector" : {
+        "languageSelector": {
             "es": "Español",
             "en": "Inglés"
         },
@@ -41,10 +45,6 @@
         }
     },
     "home": {
-        "title": "Hola Mundo!",
-        "metadata": {
-            "title": "Inicio",
-            "description": "Adopta un perro mayor hoy y marca la diferencia en su vida."
-        }
+        "title": "Hola Mundo!"
     }
 }

@@ -2,8 +2,9 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { routing } from "@/i18n/routing";
 import "@/styles/globals.css";
+import { Metadata } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Geist, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 
@@ -22,16 +23,33 @@ const inter = Inter({
     variable: "--font-inter",
 });
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params;
+
+    const t = await getTranslations({ locale, namespace: "metadata" });
+
+    return {
+        title: {
+            template: `%s | ${t("siteName")}`,
+            default: t("siteName"),
+        },
+        description: t("description"),
+    };
+}
+
 export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({ children, params }: Props) {
     const { locale } = await params;
+
     if (!hasLocale(routing.locales, locale)) {
         notFound();
     }
+
     setRequestLocale(locale);
+
     return (
         <html lang={locale}>
             <body

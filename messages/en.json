@@ -1,4 +1,8 @@
 {
+    "metadata": {
+        "title": "Home",
+        "description": "Adopt a senior dog today and make a difference in their life."
+    },
     "header": {
         "navLinks": {
             "home": "Home",
@@ -7,7 +11,7 @@
             "contact": "Contact",
             "blog": "Blog"
         },
-        "languageSelector" : {
+        "languageSelector": {
             "es": "Spanish",
             "en": "English"
         },
@@ -20,7 +24,7 @@
             "logout": "Log Out"
         }
     },
-     "footer": {
+    "footer": {
         "description": "Making senior dog adoption simple, smart, and full of love. Join our community of over 50000",
         "explore": "Explore",
         "contact": "Contact",
@@ -41,10 +45,6 @@
         }
     },
     "home": {
-        "title": "Hello World!",
-        "metadata": {
-            "title": "Home",
-            "description": "Adopt a senior dog today and make a difference in their life."
-        }
+        "title": "Hello World!"
     }
 }
