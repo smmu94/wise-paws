@@ -51,6 +51,14 @@
         "sendButton": "Enviar"
     },
     "home": {
-        "title": "Hola Mundo!"
+        "hero": {
+            "videoFallback": "No se pudo cargar el video.",
+            "title": "Dale un hogar de oro a una <important>colita de plata</important>",
+            "subtitle": "Vive la lealtad y la calma inigualables de un compañero senior. Únete a nuestra misión de encontrar un hogar cálido y un corazón amoroso para cada perro anciano.",
+            "cta": {
+                "adopt": "Adopta Ahora",
+                "learnMore": "Saber Más"
+            }
+        }
     }
 }

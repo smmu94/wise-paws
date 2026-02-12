@@ -51,6 +51,14 @@
         "sendButton": "Send"
     },
     "home": {
-        "title": "Hello World!"
+        "hero": {
+            "videoFallback": "It seems your browser does not support the video",
+            "title": "Give a Silver Tail a <important>Golden Home</important>",
+            "subtitle": "Experience the unmatched loyalty and calm of a senior companion. Join our mission to find every old dog a warm bed and a loving heart.",
+            "cta": {
+                "adopt": "Adopt Now",
+                "learnMore": "Learn More"
+            }
+        }
     }
 }
