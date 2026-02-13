@@ -46,9 +46,26 @@
     },
     "chatAssistant": {
         "header": "Assistant",
-        "initialMessage": "Hello 👋, I'm your Wise Paws assistant. I’m here to help you with any questions or inquiries you may have.",
+        "initialMessage": "Hi there! I'm your Wise Paws assistant, here to help you find the perfect senior dog to adopt. Tell me a bit about your home. Do you have a yard? Any other pets? What kind of energy level are you looking for in a dog?",
         "inputPlaceholder": "Type your message...",
         "sendButton": "Send"
+    },
+    "dogCard": {
+        "viewProfile": "View Profile",
+        "age": "years",
+        "energyLevel": {
+            "title": "Energy",
+            "very_low": "Very Low",
+            "low": "Low",
+            "moderate": "Moderate",
+            "high": "High",
+            "very_high": "Very High"
+        },
+        "status": {
+            "available": "Available",
+            "pending": "Pending",
+            "adopted": "Adopted"
+        }
     },
     "home": {
         "hero": {
@@ -59,6 +76,34 @@
                 "adopt": "Adopt Now",
                 "learnMore": "Learn More"
             }
+        },
+        "nearbyDogs": {
+            "noNearbyDogs": "No senior dogs found near you at the moment. Please check back later or explore our adoptable dogs from other locations.",
+            "title": "Senior Dogs Near You",
+            "cta": {
+                "viewAll": "View All"
+            }
+        },
+        "wisebot": {
+            "title": "Find your perfect senior dog match with <important>Wise Paws AI</important>",
+            "description": "Our AI-powered MatchMaker is here to help you find the ideal senior dog companion. Just tell us about your lifestyle, preferences, and home environment, and we'll provide personalized dog recommendations that fit your unique situation. Whether you're looking for a low-energy lap dog or an active buddy for outdoor adventures, Wise Paws AI is your trusted guide to finding the perfect furry friend."
+        },
+        "howItWorks": {
+            "title": "How It Works",
+            "steps": [
+                {
+                    "title": "Browse & Match",
+                    "description": "Use our AI or filters to find a senior dog that fits your hoem and energy level"
+                },
+                {
+                    "title": "Virtual Meet",
+                    "description": "Schedule a video call with the shelter or foster parent to meet your match from home"
+                },
+                {
+                    "title": "Welcome Home",
+                    "description": "Complete the paperwork and prepare your heart for a new best friend."
+                }
+            ]
         }
     }
 }

@@ -46,9 +46,26 @@
     },
     "chatAssistant": {
         "header": "Asistente",
-        "initialMessage": "Hola 👋, soy tu asistente de Wise Paws. Estoy aquí para ayudarte con cualquier duda o consulta que tengas.",
+        "initialMessage": "¡Hola! Soy tu asistente de Wise Paws y estoy aquí para ayudarte a encontrar al compañero senior ideal. Cuéntame un poco sobre tu hogar: ¿tienes jardín?, ¿vives con otras mascotas? y ¿qué nivel de energía buscas en tu futuro perro?",
         "inputPlaceholder": "Escribe tu mensaje...",
         "sendButton": "Enviar"
+    },
+    "dogCard": {
+        "viewProfile": "Ver Perfil",
+        "age": "años",
+        "energyLevel": {
+            "title": "Energía",
+            "very_low": "Muy Baja",
+            "low": "Baja",
+            "moderate": "Moderada",
+            "high": "Alta",
+            "very_high": "Muy Alta"
+        },
+        "status": {
+            "available": "Disponible",
+            "pending": "En proceso",
+            "adopted": "Adoptado"
+        }
     },
     "home": {
         "hero": {
@@ -59,6 +76,34 @@
                 "adopt": "Adopta Ahora",
                 "learnMore": "Saber Más"
             }
+        },
+        "nearbyDogs": {
+            "noNearbyDogs": "No senior dogs found near you at the moment. Please check back later or explore our adoptable dogs from other locations.",
+            "title": "Perros Senior Cerca de Ti",
+            "cta": {
+                "viewAll": "Ver Todos"
+            }
+        },
+        "wisebot": {
+            "title": "Encuentra tu compañero senior perfecto con <important>Wise Paws IA</important>",
+            "description": "Nuestro MatchMaker impulsado por IA está aquí para ayudarte a encontrar el compañero senior ideal. Solo cuéntanos sobre tu estilo de vida, preferencias y entorno doméstico, y te proporcionaremos recomendaciones personalizadas de perros que se ajusten a tu situación única. Ya sea que busques un perro tranquilo para acostarte o un amigo activo para aventuras al aire libre, Wise Paws IA es tu guía confiable para encontrar el amigo peludo perfecto."
+        },
+        "howItWorks": {
+            "title": "Cómo Funciona",
+            "steps": [
+                {
+                    "title": "Explorar y Emparejar",
+                    "description": "Usa nuestra IA o filtros para encontrar un perro senior que se ajuste a tu hogar y nivel de energía"
+                },
+                {
+                    "title": "Conocer Virtualmente",
+                    "description": "Programa una llamada de video con el refugio o el familiar para conocer a tu compañero desde casa"
+                },
+                {
+                    "title": "Bienvenido a Casa",
+                    "description": "Completa los trámites y prepara tu corazón para un nuevo mejor amigo."
+                }
+            ]
         }
     }
 }

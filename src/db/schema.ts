@@ -1,3 +1,4 @@
+import { InferSelectModel } from "drizzle-orm";
 import {
     integer,
     pgEnum,
@@ -49,6 +50,8 @@ export const dogs = pgTable("dogs", {
     status: dogStatusEnum("status").notNull().default("available"),
     createdAt: timestamp("created_at").defaultNow().notNull(),
 });
+
+export type Dog = InferSelectModel<typeof dogs>;
 
 export const users = pgTable("users", {
     id: serial("id").primaryKey(),
