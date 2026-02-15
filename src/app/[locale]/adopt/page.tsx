@@ -1,4 +1,5 @@
 import { FiltersSidebar } from "@/components/pages/adopt/filtersSidebar";
+import { SortHeader } from "@/components/pages/adopt/sortHeader";
 
 type SearchParamsProps = {
     [key: string]: string | string[] | undefined;
@@ -20,7 +21,7 @@ export default async function AdoptPage({
                 </div>
             </aside>
             <section className="flex-1">
-                <p>Sort Header</p>
+                <SortHeader totalResults={10}/>
                 <p>Dogs List</p>
             </section>
            </div>

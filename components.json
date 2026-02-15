@@ -13,11 +13,11 @@
   "iconLibrary": "lucide",
   "rtl": false,
   "aliases": {
-    "components": "@/i18n/components",
-    "utils": "@/i18n/lib/utils",
-    "ui": "@/i18n/components/ui",
-    "lib": "@/i18n/lib",
-    "hooks": "@/i18n/hooks"
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
   },
   "registries": {}
 }

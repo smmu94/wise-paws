@@ -138,6 +138,19 @@
                 "apply": "Aplicar Filtros",
                 "clear": "Limpiar Filtros"
             }
+        },
+        "header": {
+            "title": "Adopta un Amigo",
+            "subtitle": "encontrados cerca de ti",
+            "sortBy": {
+                "title": "Ordenar por",
+                "options": {
+                    "closest": "Más Cercanos",
+                    "oldest": "Más Antiguos",
+                    "calmFirst": "Más Tranquilos",
+                    "activeFirst": "Más Activos"
+                }
+            }
         }
     }
 }

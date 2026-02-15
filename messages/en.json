@@ -138,6 +138,19 @@
                 "apply": "Apply Filters",
                 "clear": "Clear Filters"
             }
+        },
+        "header": {
+            "title": "Adopt a Friend",
+            "subtitle": "found near you",
+            "sortBy": {
+                "title": "Sort by",
+                "options": {
+                    "closest": "Closest",
+                    "oldest": "Oldests",
+                    "calmFirst": "Calm First",
+                    "activeFirst": "Active First"
+                }
+            }
         }
     }
 }

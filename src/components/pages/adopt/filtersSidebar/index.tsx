@@ -10,7 +10,7 @@ import {
     AGE_RANGES,
     ENERGY_LEVEL_OPTIONS,
     HEALTH_STATUS_OPTIONS,
-} from "@/components/pages/adopt/filtersSidebar/filters";
+} from "@/components/pages/adopt/filtersSidebar/constants";
 import { SlidersHorizontal } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
