@@ -105,5 +105,39 @@
                 }
             ]
         }
+    },
+    "adopt": {
+        "filters": {
+            "title": "Filtros",
+            "distance": "Distancia",
+            "ageGroup": {
+                "title": "Grupo de Edad",
+                "years": "años"
+            },
+            "energyLevel": {
+                "title": "Nivel de Energía",
+                "options": {
+                    "very_low": "Muy Baja",
+                    "low": "Baja",
+                    "moderate": "Moderada",
+                    "high": "Alta",
+                    "very_high": "Muy Alta"
+                }
+            },
+            "healthStatus": {
+                "title": "Estado de Salud",
+                "options": {
+                    "excellent": "Excelente",
+                    "good": "Bueno",
+                    "needs_medication": "Necesita Medicación",
+                    "special_needs": "Necesidades Especiales",
+                    "senior_care": "Cuidado Senior"
+                }
+            },
+            "cta": {
+                "apply": "Aplicar Filtros",
+                "clear": "Limpiar Filtros"
+            }
+        }
     }
 }

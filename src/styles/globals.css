@@ -11,6 +11,7 @@
   --color-light-cream: #fdfdfd;
   --color-light-gray: #e5e7eb;
   --color-brown: #2d2424;
+  
   --font-base: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-title: var(--font-geist-sans), sans-serif; 
 }
@@ -79,4 +80,76 @@
   *::-webkit-scrollbar-thumb:hover {
     background-color: var(--color-dark-gray);
   }
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: #fdfdfd;
+  --foreground: #2d2424; 
+  
+  --card: #ffffff;
+  --card-foreground: #2d2424;
+  
+  --popover: #ffffff;
+  --popover-foreground: #2d2424;
+  
+  --primary: #ff7e6a;       
+  --primary-foreground: #ffffff;
+  
+  --secondary: #f3f4f6;
+  --secondary-foreground: #2d2424;
+  
+  --muted: #f3f4f6;
+  --muted-foreground: #606060;
+  
+  --accent: #ff7e6a10;
+  --accent-foreground: #ff7e6a;
+  
+  --destructive: oklch(0.577 0.245 27.325);
+  
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #ff7e6a; 
+}
+
+.dark {
+  --background: #2d2424;
+  --foreground: #fdfdfd;
+  --primary: #ff7e6a;
+  --border: #3d3d3d;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  } 
 }

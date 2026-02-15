@@ -1,32 +1,35 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { LANGUAGES } from "./constants";
-import { cn } from "@/lib/utils";
 
 export const LanguageSelector = () => {
     const t = useTranslations("header");
     const locale = useLocale();
     const router = useRouter();
     const pathname = usePathname();
+    const searchParams = useSearchParams();
 
     const handleLanguageChange = (newLocale: string) => {
-        if (newLocale === locale) return;
-        const newPath = pathname.replace(`/${locale}`, `/${newLocale}`);
-        router.push(newPath);
+        router.push(`${pathname}?${searchParams.toString()}`, {
+            locale: newLocale,
+        });
     };
 
-    const currentLanguage = LANGUAGES.find((lang) => lang.code === locale) || LANGUAGES[0];
+    const currentLanguage =
+        LANGUAGES.find((lang) => lang.code === locale) || LANGUAGES[0];
 
     return (
         <>
@@ -39,16 +42,20 @@ export const LanguageSelector = () => {
                             variant={isActive ? "default" : "outline"}
                             className={cn(
                                 "gap-2 px-3 py-1 cursor-pointer transition-all hover:opacity-80",
-                                !isActive && "bg-background text-muted-foreground"
+                                !isActive &&
+                                    "bg-background text-muted-foreground",
                             )}
                             onClick={() => handleLanguageChange(lang.code)}
                         >
-                            <Image 
-                                src={lang.flag} 
-                                alt={lang.label} 
-                                width={14} 
-                                height={14} 
-                                className={cn("rounded-sm", !isActive && "grayscale-[0.5]")}
+                            <Image
+                                src={lang.flag}
+                                alt={lang.label}
+                                width={14}
+                                height={14}
+                                className={cn(
+                                    "rounded-sm",
+                                    !isActive && "grayscale-[0.5]",
+                                )}
                             />
                             <span className="uppercase text-[10px] font-bold">
                                 {lang.code}
@@ -61,12 +68,16 @@ export const LanguageSelector = () => {
             <div className="hidden md:block">
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="outline" size="sm" className="gap-2 w-fit">
-                            <Image 
-                                src={currentLanguage.flag} 
-                                alt={currentLanguage.label} 
-                                width={20} 
-                                height={20} 
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            className="gap-2 w-fit"
+                        >
+                            <Image
+                                src={currentLanguage.flag}
+                                alt={currentLanguage.label}
+                                width={20}
+                                height={20}
                             />
                             <span className="uppercase text-small-bolder">
                                 {currentLanguage.code}
@@ -81,13 +92,15 @@ export const LanguageSelector = () => {
                                 onClick={() => handleLanguageChange(lang.code)}
                                 className="gap-3 cursor-pointer"
                             >
-                                <Image 
-                                    src={lang.flag} 
-                                    alt={lang.label} 
-                                    width={20} 
-                                    height={20} 
+                                <Image
+                                    src={lang.flag}
+                                    alt={lang.label}
+                                    width={20}
+                                    height={20}
                                 />
-                                <span className="text-small">{t(lang.label)}</span>
+                                <span className="text-small">
+                                    {t(lang.label)}
+                                </span>
                             </DropdownMenuItem>
                         ))}
                     </DropdownMenuContent>

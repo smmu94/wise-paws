@@ -105,5 +105,39 @@
                 }
             ]
         }
+    },
+    "adopt": {
+        "filters": {
+            "title": "Filters",
+            "distance": "Distance",
+            "ageGroup": {
+                "title": "Age Group",
+                "years": "years"
+            },
+            "energyLevel": {
+                "title": "Energy Level",
+                "options": {
+                    "very_low": "Very Low",
+                    "low": "Low",
+                    "moderate": "Moderate",
+                    "high": "High",
+                    "very_high": "Very High"
+                }
+            },
+            "healthStatus": {
+                "title": "Health Status",
+                "options": {
+                    "excellent": "Excellent",
+                    "good": "Good",
+                    "needs_medication": "Needs Medication",
+                    "special_needs": "Special Needs",
+                    "senior_care": "Senior Care"
+                }
+            },
+            "cta": {
+                "apply": "Apply Filters",
+                "clear": "Clear Filters"
+            }
+        }
     }
 }
