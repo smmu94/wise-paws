@@ -1,6 +1,8 @@
+import { SortOptions } from "@/lib/types";
+
 export const SORT_OPTIONS = [
-  { value: "distance_asc", label: "closest" },
-  { value: "oldest", label: "oldest" },
-  { value: "energy_asc", label: "calmFirst" },
-  { value: "energy_desc", label: "activeFirst" },
+  { value: SortOptions.DISTANCE_ASC, label: "closest" },
+  { value: SortOptions.OLDEST, label: "oldest" },
+  { value: SortOptions.ENERGY_ASC, label: "calmFirst" },
+  { value: SortOptions.ENERGY_DESC, label: "activeFirst" },
 ];

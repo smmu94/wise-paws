@@ -22,7 +22,7 @@ export async function DogCard({ dog }: { dog: Dog }) {
             href={`${routes.adopt.detail(`${dog.id}`)}`} 
             className="group block"
         >
-            <Card className="relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 text-brown">
+            <Card className="relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 text-brown min-w-3xs">
                 <div className="relative h-64 w-full overflow-hidden">
                     <Image
                         src={dog.images[0]}

@@ -151,6 +151,17 @@
                     "activeFirst": "Active First"
                 }
             }
+        },
+        "dogList": {
+            "empty": {
+                "title": "No Senior Dogs Found",
+                "description": "It seems there are no senior dogs available that match your current filters. Try removing some filters or adjusting the values of the applied filters to find more options."
+            },
+            "error": {
+                "title": "Error Loading Senior Dogs",
+                "description": "An error occurred while loading the senior dogs. Please try again.",
+                "cta": "Try Again"
+            }
         }
     }
 }

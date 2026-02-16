@@ -151,6 +151,17 @@
                     "activeFirst": "Más Activos"
                 }
             }
+        },
+        "dogList": {
+            "empty": {
+                "title": "No se encontraron perros que coincidan con tus criterios",
+                "description": "Si necesitas más opciones, intenta eliminar algunos filtros o cambiar los valores de los filtros aplicados."
+            },
+            "error": {
+                "title": "Error al cargar los perros",
+                "description": "Ocurrió un error al cargar los perros. Por favor, inténtalo de nuevo.",
+                "cta": "Volver a intentar"
+            }
         }
     }
 }
