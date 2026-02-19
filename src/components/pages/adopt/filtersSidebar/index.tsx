@@ -1,16 +1,16 @@
 "use client";
 
+import {
+    AGE_RANGES,
+    ENERGY_LEVEL_OPTIONS,
+    HEALTH_STATUS_OPTIONS,
+} from "@/components/pages/adopt/filtersSidebar/constants";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import {
-    AGE_RANGES,
-    ENERGY_LEVEL_OPTIONS,
-    HEALTH_STATUS_OPTIONS,
-} from "@/components/pages/adopt/filtersSidebar/constants";
 import { SlidersHorizontal } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -21,6 +21,8 @@ export function FiltersSidebar() {
     const searchParams = useSearchParams();
     const t = useTranslations("adopt.filters");
 
+    const currentDistance = Number(searchParams.get("distance")) || 50;
+
     const updateFilters = (key: string, value: string | number | null) => {
         const params = new URLSearchParams(searchParams.toString());
         if (value) {
@@ -28,6 +30,7 @@ export function FiltersSidebar() {
         } else {
             params.delete(key);
         }
+        params.delete("page");
         router.push(`${pathname}?${params.toString()}`, { scroll: false });
     };
 
@@ -51,15 +54,15 @@ export function FiltersSidebar() {
                     </span>
                 </div>
                 <Slider
-                    defaultValue={[Number(searchParams.get("distance")) || 50]}
-                    max={500}
+                    value={[currentDistance]}
+                    max={1000}
                     step={10}
-                    onValueCommit={(val) => updateFilters("distance", val[0])}
+                    onValueChange={(val) => updateFilters("distance", val[0])}
                     className="cursor-pointer"
                 />
                 <div className="flex justify-between text-xs text-muted-foreground">
                     <span>0 km</span>
-                    <span>500 km</span>
+                    <span>1000 km</span>
                 </div>
             </div>
             <div className="space-y-4 pt-4">
@@ -153,18 +156,12 @@ export function FiltersSidebar() {
                     ))}
                 </div>
             </div>
-            <div className="flex flex-col gap-4 pt-6">
-                <Button className="bg-salmon hover:bg-salmon/90">
-                    {t("cta.apply")}
-                </Button>
-                <Button
-                    variant="outline"
-                    onClick={clearFilters}
-                    className="border-light-gray text-brown"
-                >
-                    {t("cta.clear")}
-                </Button>
-            </div>
+            <Button
+                onClick={clearFilters}
+                className="border-light-gray text-brown"
+            >
+                {t("cta.clear")}
+            </Button>
         </Card>
     );
 }
