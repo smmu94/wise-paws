@@ -23,7 +23,7 @@ export default async function AdoptPage({
     return (
         <main className="container mx-auto px-4 py-8">
             <div className="flex flex-col md:flex-row gap-8">
-                <aside className="w-full md:w-1/4">
+                <aside className="lg:w-1/4">
                     <div className="sticky top-24">
                         <FiltersSidebar />
                     </div>

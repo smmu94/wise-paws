@@ -24,12 +24,10 @@ export function SortHeader() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row justify-between items-end md:items-center gap-4">
-            <div className="space-y-1">
-                <h1 className="text-subtitle text-brown font-bold tracking-tight">
-                    {t("title")}
-                </h1>
-            </div>
+        <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-4">
+            <h1 className="text-subtitle text-brown font-bold tracking-tight">
+                {t("title")}
+            </h1>
             <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-sm border border-light-gray/30 shadow-sm">
                 <span className="text-small-bolder text-salmon capitalize">
                     {t("sortBy.title")}:

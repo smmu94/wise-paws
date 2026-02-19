@@ -36,7 +36,7 @@ export function FiltersSidebar() {
     };
 
     return (
-        <Card className="p-6 border-none shadow-sm bg-light-gray/20 w-3xs">
+        <Card className="p-6 border-none shadow-sm bg-light-gray/20 md:w-3xs">
             <div className="flex items-center gap-2 border-b pb-4">
                 <SlidersHorizontal className="h-5 w-5 text-salmon" />
                 <h2 className="text-body-bolder text-brown">{t("title")}</h2>
