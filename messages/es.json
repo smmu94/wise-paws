@@ -3,6 +3,39 @@
         "siteName": "Wise Paws",
         "description": "Adopta un perro mayor hoy y marca la diferencia en su vida."
     },
+    "dogEnums": {
+        "energyLevel": {
+            "very_low": "Muy Baja",
+            "low": "Baja",
+            "moderate": "Moderada",
+            "high": "Alta",
+            "very_high": "Muy Alta"
+        },
+        "healthStatus": {
+            "excellent": "Excelente",
+            "good": "Bueno",
+            "needs_medication": "Necesita Medicación",
+            "special_needs": "Necesidades Especiales",
+            "senior_care": "Cuidado Senior"
+        },
+        "vaccinationStatus": {
+            "up_to_date": "Al día",
+            "pending": "Pendiente",
+            "unknown": "Desconocido"
+        },
+        "temperament": {
+            "sweet_calm": "Dulce y Tranquilo",
+            "playful_active": "Juguetón y Activo",
+            "loyal_protective": "Leal y Protector",
+            "gentle_shy": "Gentil y Tímido",
+            "independent": "Independiente"
+        },
+        "status": {
+            "available": "Disponible",
+            "pending": "En proceso",
+            "adopted": "Adoptado"
+        }
+    },
     "header": {
         "navLinks": {
             "home": "Inicio",
@@ -46,47 +79,30 @@
     },
     "chatAssistant": {
         "header": "Asistente",
-        "initialMessage": "¡Hola! Soy tu asistente de Wise Paws y estoy aquí para ayudarte a encontrar al compañero senior ideal. Cuéntame un poco sobre tu hogar: ¿tienes jardín?, ¿vives con otras mascotas? y ¿qué nivel de energía buscas en tu futuro perro?",
+        "initialMessage": "¡Hola! Soy tu asistente de Wise Paws y estoy aquí para ayudarte a encontrar al compañero senior ideal...",
         "inputPlaceholder": "Escribe tu mensaje...",
         "sendButton": "Enviar"
-    },
-    "dogCard": {
-        "viewProfile": "Ver Perfil",
-        "age": "años",
-        "energyLevel": {
-            "title": "Energía",
-            "very_low": "Muy Baja",
-            "low": "Baja",
-            "moderate": "Moderada",
-            "high": "Alta",
-            "very_high": "Muy Alta"
-        },
-        "status": {
-            "available": "Disponible",
-            "pending": "En proceso",
-            "adopted": "Adoptado"
-        }
     },
     "home": {
         "hero": {
             "videoFallback": "No se pudo cargar el video.",
             "title": "Dale un hogar de oro a una <important>colita de plata</important>",
-            "subtitle": "Vive la lealtad y la calma inigualables de un compañero senior. Únete a nuestra misión de encontrar un hogar cálido y un corazón amoroso para cada perro anciano.",
+            "subtitle": "Vive la lealtad y la calma inigualables de un compañero senior.",
             "cta": {
                 "adopt": "Adopta Ahora",
                 "learnMore": "Saber Más"
             }
         },
         "nearbyDogs": {
-            "noNearbyDogs": "No senior dogs found near you at the moment. Please check back later or explore our adoptable dogs from other locations.",
+            "noNearbyDogs": "No se encontraron perros senior cerca de ti en este momento.",
             "title": "Perros Senior Cerca de Ti",
             "cta": {
                 "viewAll": "Ver Todos"
             }
         },
         "wisebot": {
-            "title": "Encuentra tu compañero senior perfecto con <important>Wise Paws IA</important>",
-            "description": "Nuestro MatchMaker impulsado por IA está aquí para ayudarte a encontrar el compañero senior ideal. Solo cuéntanos sobre tu estilo de vida, preferencias y entorno doméstico, y te proporcionaremos recomendaciones personalizadas de perros que se ajusten a tu situación única. Ya sea que busques un perro tranquilo para acostarte o un amigo activo para aventuras al aire libre, Wise Paws IA es tu guía confiable para encontrar el amigo peludo perfecto."
+            "title": "Encuentra tu compañero perfecto con <important>Wise Paws IA</important>",
+            "description": "Nuestro MatchMaker impulsado por IA está aquí para ayudarte..."
         },
         "howItWorks": {
             "title": "Cómo Funciona",
@@ -110,33 +126,12 @@
         "filters": {
             "title": "Filtros",
             "distance": "Distancia",
-            "ageGroup": {
-                "title": "Grupo de Edad",
-                "years": "años"
-            },
-            "energyLevel": {
-                "title": "Nivel de Energía",
-                "options": {
-                    "very_low": "Muy Baja",
-                    "low": "Baja",
-                    "moderate": "Moderada",
-                    "high": "Alta",
-                    "very_high": "Muy Alta"
-                }
-            },
-            "healthStatus": {
-                "title": "Estado de Salud",
-                "options": {
-                    "excellent": "Excelente",
-                    "good": "Bueno",
-                    "needs_medication": "Necesita Medicación",
-                    "special_needs": "Necesidades Especiales",
-                    "senior_care": "Cuidado Senior"
-                }
-            },
+            "ageGroup": "Grupo de Edad",
+            "energyLevel": "Nivel de Energía",
+            "healthStatus": "Estado de Salud",
             "cta": {
                 "apply": "Aplicar Filtros",
-                "clear": "Limpiar Filtros"
+                "clear": "Limpiar"
             }
         },
         "header": {
@@ -152,6 +147,9 @@
                 }
             }
         },
+        "dogCard": {
+            "viewProfile": "Ver Perfil"
+        },
         "dogList": {
             "empty": {
                 "title": "No se encontraron perros que coincidan con tus criterios",
@@ -162,6 +160,38 @@
                 "description": "Ocurrió un error al cargar los perros. Por favor, inténtalo de nuevo.",
                 "cta": "Volver a intentar"
             }
+        },
+        "dogDetails": {
+            "breadcrumb": {
+                "link": "Perros Adoptables",
+                "page": "Detalles"
+            },
+            "header": {
+                "favorite": "Favorito"
+            },
+            "attributes": {
+                "title": "Salud y Personalidad",
+                "energy": "Energía",
+                "health": "Salud",
+                "vaccinations": "Vacunas",
+                "temperament": "Temperamento",
+                "weight": "Peso",
+                "training": "Entrenamiento"
+            },
+            "story": "Historia de {name}",
+            "adoption": {
+                "status": "Adoptable",
+                "feeLabel": "Costo de Adopción",
+                "cta": "Iniciar Proceso",
+                "ask": "Hacer una pregunta"
+            },
+            "shelter": {
+                "response": "Normalmente responde en 24 horas",
+                "certified": "Refugio Certificado Wise Paws"
+            }
         }
+    },
+    "common": {
+        "age": "años"
     }
 }

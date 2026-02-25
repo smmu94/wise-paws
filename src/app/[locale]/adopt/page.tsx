@@ -1,7 +1,7 @@
-import { DogsList } from "@/components/pages/adopt/dogList";
-import { SortHeader } from "@/components/pages/adopt/sortHeader";
-import { LoadingView } from "@/components/pages/adopt/dogList/loadingView";
-import { FiltersSidebar } from "@/components/pages/adopt/filtersSidebar";
+import { DogsList } from "@/modules/adopt/list/dogList";
+import { LoadingView } from "@/modules/adopt/list/dogList/loadingView";
+import { FiltersSidebar } from "@/modules/adopt/list/filtersSidebar";
+import { SortHeader } from "@/modules/adopt/list/sortHeader";
 import { DogFilters } from "@/lib/types";
 import { headers } from "next/headers";
 import { Suspense } from "react";
@@ -21,7 +21,7 @@ export default async function AdoptPage({
         ? parseFloat(headerList.get("x-vercel-ip-longitude")!)
         : undefined;
     return (
-        <main className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col md:flex-row gap-8">
                 <aside className="lg:w-1/4">
                     <div className="sticky top-24">
@@ -39,6 +39,6 @@ export default async function AdoptPage({
                     </Suspense>
                 </section>
             </div>
-        </main>
+        </div>
     );
 }

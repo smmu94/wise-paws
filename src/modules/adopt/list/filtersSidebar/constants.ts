@@ -2,12 +2,12 @@ import { energyLevelEnum, healthStatusEnum } from "@/db/schema";
 
 export const ENERGY_LEVEL_OPTIONS = energyLevelEnum.enumValues.map((value) => ({
   value,
-  label: `energyLevel.options.${value}`,
+  label: `energyLevel.${value}`,
 }));
 
 export const HEALTH_STATUS_OPTIONS = healthStatusEnum.enumValues.map((value) => ({
   value,
-  label: `healthStatus.options.${value}`
+  label: `healthStatus.${value}`
 }));
 
 export const AGE_RANGES = [

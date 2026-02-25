@@ -9,42 +9,58 @@ async function main() {
     console.log("🌱 Starting database seed...");
 
     await db.delete(schema.dogs);
-    console.log("🗑️  Previous data deleted");
+    console.log("🗑️ Previous data deleted");
 
     await db.insert(schema.dogs).values([
         {
             name: "Luna",
+            breed: "Golden Retriever",
             age: 10,
             story: "Luna is a loving golden retriever who spent her entire life as a therapy dog in a hospital. Now she seeks a quiet home to spend her golden years. She loves sleeping in the sun and receiving cuddles.",
             images: [
                 "https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=800",
-                "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800",
+                "https://images.unsplash.com/photo-1608469926865-b2d2200bb2f6?w=800",
             ],
             lat: 43.3623,
             lng: -8.4115,
             countryCode: "ES",
             cityName: "A Coruña",
+            shelterName: "Sunset Acres Sanctuary",
+            shelterLat: 43.355,
+            shelterLng: -8.41,
+            adoptionFee: 50,
             energyLevel: "low",
+            temperament: "sweet_calm",
             healthStatus: "good",
+            vaccinationStatus: "up_to_date",
             status: "available",
         },
         {
             name: "Max",
+            breed: "Labrador Retriever",
             age: 12,
             story: "Max is a very wise black Labrador. He was rescued from a shelter and is now looking for a family to give him the love he always deserved. He needs short walks and a house with a garden.",
             images: [
                 "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800",
+                "https://images.unsplash.com/photo-1537204696486-967f1b7198c8?w=800",
             ],
             lat: 42.8805,
             lng: -8.5457,
             countryCode: "ES",
             cityName: "Santiago de Compostela",
+            shelterName: "Galicia Rescue Center",
+            shelterLat: 42.89,
+            shelterLng: -8.53,
+            adoptionFee: 0,
             energyLevel: "moderate",
+            temperament: "loyal_protective",
             healthStatus: "needs_medication",
+            vaccinationStatus: "up_to_date",
             status: "available",
         },
         {
             name: "Bella",
+            breed: "Beagle",
             age: 9,
             story: "Bella is a sweet and calm beagle. Her owner passed away and she is now looking for a new home. She is perfect for seniors or families with responsible children. She loves to cuddle on the couch.",
             images: [
@@ -54,12 +70,19 @@ async function main() {
             lng: -3.7038,
             countryCode: "ES",
             cityName: "Madrid",
+            shelterName: "Madrid Senior Paws",
+            shelterLat: 40.453,
+            shelterLng: -3.6883,
+            adoptionFee: 80,
             energyLevel: "low",
+            temperament: "sweet_calm",
             healthStatus: "excellent",
+            vaccinationStatus: "up_to_date",
             status: "available",
         },
         {
             name: "Rocky",
+            breed: "German Shepherd",
             age: 11,
             story: "Rocky is a loyal and protective German Shepherd. He spent 8 years as a police dog and is now retired. He is looking for a home without other dogs where he can be the king of the house.",
             images: [
@@ -69,12 +92,19 @@ async function main() {
             lng: 2.1734,
             countryCode: "ES",
             cityName: "Barcelona",
+            shelterName: "K9 Heroes Foundation",
+            shelterLat: 41.4036,
+            shelterLng: 2.1744,
+            adoptionFee: 0,
             energyLevel: "moderate",
+            temperament: "loyal_protective",
             healthStatus: "good",
+            vaccinationStatus: "up_to_date",
             status: "available",
         },
         {
             name: "Canela",
+            breed: "Cocker Spaniel",
             age: 13,
             story: "Canela is a noble-natured Cocker Spaniel. She was found abandoned in a park. Despite her age, she still enjoys quiet walks and playing with stuffed toys.",
             images: [
@@ -84,12 +114,19 @@ async function main() {
             lng: -0.3763,
             countryCode: "ES",
             cityName: "Valencia",
+            shelterName: "Valencia Hope Shelter",
+            shelterLat: 39.475,
+            shelterLng: -0.36,
+            adoptionFee: 40,
             energyLevel: "very_low",
+            temperament: "gentle_shy",
             healthStatus: "senior_care",
+            vaccinationStatus: "pending",
             status: "available",
         },
         {
             name: "Bruno",
+            breed: "French Bulldog",
             age: 10,
             story: "Bruno is an adorable and playful French Bulldog. His family had to move abroad and couldn't take him. He is perfect for apartments and loves children.",
             images: [
@@ -99,12 +136,19 @@ async function main() {
             lng: -2.935,
             countryCode: "ES",
             cityName: "Bilbao",
+            shelterName: "Euskadi Friends",
+            shelterLat: 43.27,
+            shelterLng: -2.95,
+            adoptionFee: 120,
             energyLevel: "low",
+            temperament: "playful_active",
             healthStatus: "good",
+            vaccinationStatus: "up_to_date",
             status: "available",
         },
         {
             name: "Nala",
+            breed: "Siberian Husky",
             age: 8,
             story: "Nala is a beautiful and elegant Siberian Husky. She was rescued from an illegal breeding facility. She loves the cold and needs an active family to take her hiking.",
             images: [
@@ -114,12 +158,19 @@ async function main() {
             lng: -8.4115,
             countryCode: "ES",
             cityName: "A Coruña",
+            shelterName: "Northern Stars Rescue",
+            shelterLat: 43.37,
+            shelterLng: -8.4,
+            adoptionFee: 150,
             energyLevel: "high",
+            temperament: "independent",
             healthStatus: "excellent",
+            vaccinationStatus: "up_to_date",
             status: "available",
         },
         {
             name: "Toby",
+            breed: "Yorkshire Terrier",
             age: 14,
             story: "Toby is a tiny and affectionate Yorkshire Terrier. He is the sweetest senior dog you'll ever meet. He's just looking for a warm lap and lots of love in his final years.",
             images: [
@@ -129,12 +180,19 @@ async function main() {
             lng: -5.9845,
             countryCode: "ES",
             cityName: "Sevilla",
+            shelterName: "Little Friends Sevilla",
+            shelterLat: 37.395,
+            shelterLng: -5.97,
+            adoptionFee: 0,
             energyLevel: "very_low",
+            temperament: "sweet_calm",
             healthStatus: "needs_medication",
+            vaccinationStatus: "up_to_date",
             status: "available",
         },
         {
             name: "Coco",
+            breed: "Miniature Schnauzer",
             age: 9,
             story: "Coco is a smart and active Miniature Schnauzer. His owner entered a nursing home and can't take care of him. He loves learning tricks and playing with interactive toys.",
             images: [
@@ -144,12 +202,19 @@ async function main() {
             lng: -8.5457,
             countryCode: "ES",
             cityName: "Santiago de Compostela",
+            shelterName: "Galicia Rescue Center",
+            shelterLat: 42.89,
+            shelterLng: -8.53,
+            adoptionFee: 60,
             energyLevel: "moderate",
+            temperament: "playful_active",
             healthStatus: "good",
+            vaccinationStatus: "up_to_date",
             status: "available",
         },
         {
             name: "Manchas",
+            breed: "Dalmatian",
             age: 11,
             story: "Manchas is an elegant Dalmatian with a sad story. He was abandoned after vacation. Despite everything, he remains cheerful and loves to run (though not as much as before).",
             images: [
@@ -159,15 +224,20 @@ async function main() {
             lng: -4.0273,
             countryCode: "ES",
             cityName: "Toledo",
+            shelterName: "Castilla Hope",
+            shelterLat: 39.856,
+            shelterLng: -4.015,
+            adoptionFee: 50,
             energyLevel: "moderate",
+            temperament: "gentle_shy",
             healthStatus: "good",
+            vaccinationStatus: "up_to_date",
             status: "pending",
         },
     ]);
 
-    console.log("✅ 10 dogs inserted successfully");
+    console.log("✅ 10 dogs with shelter locations and fees inserted!");
     console.log("🎉 Seed completed!");
-
     process.exit(0);
 }
 

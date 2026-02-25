@@ -3,6 +3,39 @@
         "siteName": "Wise Paws",
         "description": "Adopt a senior dog today and make a difference in their life."
     },
+    "dogEnums": {
+        "energyLevel": {
+            "very_low": "Very Low",
+            "low": "Low",
+            "moderate": "Moderate",
+            "high": "High",
+            "very_high": "Very High"
+        },
+        "healthStatus": {
+            "excellent": "Excellent",
+            "good": "Good",
+            "needs_medication": "Needs Medication",
+            "special_needs": "Special Needs",
+            "senior_care": "Senior Care"
+        },
+        "vaccinationStatus": {
+            "up_to_date": "Up to Date",
+            "pending": "Pending",
+            "unknown": "Unknown"
+        },
+        "temperament": {
+            "sweet_calm": "Sweet & Calm",
+            "playful_active": "Playful & Active",
+            "loyal_protective": "Loyal & Protective",
+            "gentle_shy": "Gentle & Shy",
+            "independent": "Independent"
+        },
+        "status": {
+            "available": "Available",
+            "pending": "Pending",
+            "adopted": "Adopted"
+        }
+    },
     "header": {
         "navLinks": {
             "home": "Home",
@@ -25,10 +58,10 @@
         }
     },
     "footer": {
-        "description": "Making senior dog adoption simple, smart, and full of love. Join our community of over 50000",
+        "description": "Making senior dog adoption simple, smart, and full of love. Join our community of over 50,000",
         "explore": "Explore",
         "contact": "Contact",
-        "location": "Comunidad 100% Remota | Con sede en la nube",
+        "location": "100% Remote Community | Cloud-based Headquarters",
         "resources": {
             "title": "Resources",
             "links": {
@@ -50,23 +83,6 @@
         "inputPlaceholder": "Type your message...",
         "sendButton": "Send"
     },
-    "dogCard": {
-        "viewProfile": "View Profile",
-        "age": "years",
-        "energyLevel": {
-            "title": "Energy",
-            "very_low": "Very Low",
-            "low": "Low",
-            "moderate": "Moderate",
-            "high": "High",
-            "very_high": "Very High"
-        },
-        "status": {
-            "available": "Available",
-            "pending": "Pending",
-            "adopted": "Adopted"
-        }
-    },
     "home": {
         "hero": {
             "videoFallback": "It seems your browser does not support the video",
@@ -86,7 +102,7 @@
         },
         "wisebot": {
             "title": "Find your perfect senior dog match with <important>Wise Paws AI</important>",
-            "description": "Our AI-powered MatchMaker is here to help you find the ideal senior dog companion. Just tell us about your lifestyle, preferences, and home environment, and we'll provide personalized dog recommendations that fit your unique situation. Whether you're looking for a low-energy lap dog or an active buddy for outdoor adventures, Wise Paws AI is your trusted guide to finding the perfect furry friend."
+            "description": "Our AI-powered MatchMaker is here to help you find the ideal senior dog companion. Just tell us about your lifestyle, preferences, and home environment..."
         },
         "howItWorks": {
             "title": "How It Works",
@@ -110,33 +126,12 @@
         "filters": {
             "title": "Filters",
             "distance": "Distance",
-            "ageGroup": {
-                "title": "Age Group",
-                "years": "years"
-            },
-            "energyLevel": {
-                "title": "Energy Level",
-                "options": {
-                    "very_low": "Very Low",
-                    "low": "Low",
-                    "moderate": "Moderate",
-                    "high": "High",
-                    "very_high": "Very High"
-                }
-            },
-            "healthStatus": {
-                "title": "Health Status",
-                "options": {
-                    "excellent": "Excellent",
-                    "good": "Good",
-                    "needs_medication": "Needs Medication",
-                    "special_needs": "Special Needs",
-                    "senior_care": "Senior Care"
-                }
-            },
+            "ageGroup": "Age Group",
+            "energyLevel": "Energy Level",
+            "healthStatus": "Health Status",
             "cta": {
                 "apply": "Apply Filters",
-                "clear": "Clear Filters"
+                "clear": "Clear"
             }
         },
         "header": {
@@ -146,11 +141,14 @@
                 "title": "Sort by",
                 "options": {
                     "closest": "Closest",
-                    "oldest": "Oldests",
+                    "oldest": "Oldest",
                     "calmFirst": "Calm First",
                     "activeFirst": "Active First"
                 }
             }
+        },
+        "dogCard": {
+            "viewProfile": "View Profile"
         },
         "dogList": {
             "empty": {
@@ -162,6 +160,38 @@
                 "description": "An error occurred while loading the senior dogs. Please try again.",
                 "cta": "Try Again"
             }
+        },
+        "dogDetails": {
+            "breadcrumb": {
+                "link": "Adoptable Dogs",
+                "page": "Details"
+            },
+            "header": {
+                "favorite": "Favorite"
+            },
+            "attributes": {
+                "title": "Health & Personality",
+                "energy": "Energy",
+                "health": "Health",
+                "vaccinations": "Vaccinations",
+                "temperament": "Temperament",
+                "weight": "Weight",
+                "training": "Training"
+            },
+            "story": "{name}'s Story",
+            "adoption": {
+                "status": "Adoptable",
+                "feeLabel": "Adoption Fee",
+                "cta": "Start Adoption Process",
+                "ask": "Ask a Question"
+            },
+            "shelter": {
+                "response": "Usually responds in 24 hours",
+                "certified": "Wise Paws Certified Shelter"
+            }
         }
+    },
+    "common": {
+        "age": "years old"
     }
 }

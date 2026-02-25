@@ -35,9 +35,24 @@ export const healthStatusEnum = pgEnum("health_status", [
     "senior_care",
 ]);
 
+export const vaccinationStatusEnum = pgEnum("vaccination_status", [
+    "up_to_date",
+    "pending",
+    "unknown",
+]);
+
+export const temperamentEnum = pgEnum("temperament", [
+    "sweet_calm",
+    "playful_active",
+    "loyal_protective",
+    "gentle_shy",
+    "independent",
+]);
+
 export const dogs = pgTable("dogs", {
     id: serial("id").primaryKey(),
     name: text("name").notNull(),
+    breed: text("breed").notNull().default("Mixed Breed"),
     age: integer("age").notNull(),
     story: text("story").notNull(),
     images: text("images").array().notNull().default([]),
@@ -45,8 +60,16 @@ export const dogs = pgTable("dogs", {
     lng: real("lng").notNull(),
     countryCode: text("country_code").notNull(),
     cityName: text("city_name").notNull(),
+    shelterName: text("shelter_name").notNull().default("Wise Paws Sanctuary"),
+    shelterLat: real("shelter_lat").notNull().default(0),
+    shelterLng: real("shelter_lng").notNull().default(0), 
+    adoptionFee: integer("adoption_fee").notNull().default(0),
     energyLevel: energyLevelEnum("energy_level").notNull(),
+    temperament: temperamentEnum("temperament").notNull().default("sweet_calm"),
     healthStatus: healthStatusEnum("health_status").notNull().default("good"),
+    vaccinationStatus: vaccinationStatusEnum("vaccination_status")
+        .notNull()
+        .default("up_to_date"),
     status: dogStatusEnum("status").notNull().default("available"),
     createdAt: timestamp("created_at").defaultNow().notNull(),
 });

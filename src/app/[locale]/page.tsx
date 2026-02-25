@@ -1,4 +1,4 @@
-import NearDogsGrid from "@/components/pages/home/nearDogs";
+import NearDogsGrid from "@/modules/home/nearDogs";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { routes } from "@/lib/routes";

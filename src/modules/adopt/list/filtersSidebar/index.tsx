@@ -4,7 +4,7 @@ import {
     AGE_RANGES,
     ENERGY_LEVEL_OPTIONS,
     HEALTH_STATUS_OPTIONS,
-} from "@/components/pages/adopt/filtersSidebar/constants";
+} from "@/modules/adopt/list/filtersSidebar/constants";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -20,6 +20,8 @@ export function FiltersSidebar() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const t = useTranslations("adopt.filters");
+    const tCommon = useTranslations("common");
+    const tEnums = useTranslations("dogEnums");
 
     const currentDistance = Number(searchParams.get("distance")) || 50;
 
@@ -67,7 +69,7 @@ export function FiltersSidebar() {
             </div>
             <div className="space-y-4 pt-4">
                 <Label className="text-brown font-semibold">
-                    {t("ageGroup.title")}
+                    {t("ageGroup")}
                 </Label>
                 <div className="space-y-3">
                     {AGE_RANGES.map((age) => (
@@ -95,7 +97,7 @@ export function FiltersSidebar() {
                                     {age.label}
                                 </label>
                                 <p className="text-xs text-muted-foreground">
-                                    {age.description} {t("ageGroup.years")}
+                                    {age.description} {tCommon("age")}
                                 </p>
                             </div>
                         </div>
@@ -104,7 +106,7 @@ export function FiltersSidebar() {
             </div>
             <div className="space-y-4 pt-4">
                 <Label className="text-brown font-semibold">
-                    {t("energyLevel.title")}
+                    {t("energyLevel")}
                 </Label>
                 <ToggleGroup
                     type="single"
@@ -119,14 +121,14 @@ export function FiltersSidebar() {
                             value={level.value}
                             className="rounded-full px-4 data-[state=on]:bg-salmon data-[state=on]:text-white"
                         >
-                            {t(`${level.label}`)}
+                            {tEnums(`${level.label}`)}
                         </ToggleGroupItem>
                     ))}
                 </ToggleGroup>
             </div>
             <div className="space-y-4 pt-4">
                 <Label className="text-brown font-semibold">
-                    {t("healthStatus.title")}
+                    {t("healthStatus")}
                 </Label>
                 <div className="space-y-3">
                     {HEALTH_STATUS_OPTIONS.map((status) => (
@@ -150,7 +152,7 @@ export function FiltersSidebar() {
                                 htmlFor={status.value}
                                 className="text-sm text-medium-gray cursor-pointer"
                             >
-                                {t(`${status.label}`)}
+                                {tEnums(`${status.label}`)}
                             </label>
                         </div>
                     ))}
