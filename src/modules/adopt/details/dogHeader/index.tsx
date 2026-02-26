@@ -17,6 +17,7 @@ export function DogHeader({
     shelterName,
 }: DogHeaderProps) {
     const t = useTranslations("adopt.dogDetails.header");
+    const tCommon = useTranslations("common");
     return (
         <div className="flex justify-between items-start bg-white p-6 rounded-3xl border border-light-gray/20 shadow-sm">
             <div className="space-y-2">
@@ -24,7 +25,7 @@ export function DogHeader({
                 <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary">{breed}</Badge>
                     <Badge variant="secondary">
-                        {age} {t("age")}
+                        {age} {tCommon("age")}
                     </Badge>
                     <Badge variant="secondary">{cityName}</Badge>
                     <Badge variant="secondary">

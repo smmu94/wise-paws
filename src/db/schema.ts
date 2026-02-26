@@ -3,11 +3,13 @@ import {
     integer,
     pgEnum,
     pgTable,
+    primaryKey,
     real,
     serial,
     text,
     timestamp,
 } from "drizzle-orm/pg-core";
+import type { AdapterAccount } from "next-auth/adapters";
 
 export const dogStatusEnum = pgEnum("dog_status", [
     "available",
@@ -76,16 +78,43 @@ export const dogs = pgTable("dogs", {
 
 export type Dog = InferSelectModel<typeof dogs>;
 
-export const users = pgTable("users", {
-    id: serial("id").primaryKey(),
-    email: text("email").notNull().unique(),
-    name: text("name").notNull(),
-    lastLat: real("last_lat"),
-    lastLng: real("last_lng"),
-    searchRadius: integer("search_radius").default(50),
-    preferredLang: text("preferred_lang").default("en"),
-    createdAt: timestamp("created_at").defaultNow().notNull(),
+export const users = pgTable("user", {
+  id: text("id").notNull().primaryKey().$defaultFn(() => crypto.randomUUID()),
+  name: text("name"),
+  email: text("email").notNull().unique(),
+  emailVerified: timestamp("emailVerified", { mode: "date" }),
+  image: text("image"),
+  password: text("password"),
+  lastLat: real("last_lat"),
+  lastLng: real("last_lng"),
+  searchRadius: integer("search_radius").default(50),
+  preferredLang: text("preferred_lang").default("es"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
 });
+
+export const accounts = pgTable(
+  "account",
+  {
+    userId: text("userId")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    type: text("type").$type<AdapterAccount["type"]>().notNull(),
+    provider: text("provider").notNull(),
+    providerAccountId: text("providerAccountId").notNull(),
+    refresh_token: text("refresh_token"),
+    access_token: text("access_token"),
+    expires_at: integer("expires_at"),
+    token_type: text("token_type"),
+    scope: text("scope"),
+    id_token: text("id_token"),
+    session_state: text("session_state"),
+  },
+  (account) => ({
+    compoundKey: primaryKey({
+      columns: [account.provider, account.providerAccountId],
+    }),
+  })
+);
 
 export const adoptions = pgTable("adoptions", {
     id: serial("id").primaryKey(),
